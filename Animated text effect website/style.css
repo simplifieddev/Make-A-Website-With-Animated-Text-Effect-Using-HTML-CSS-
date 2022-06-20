@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: fantasy;
+}
+
+.conatainer {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+
+}
+.logo span {
+    color: cyan;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 50%;
+}
+nav ul li a:hover{
+    color: rgb(184, 180, 180);
+}
+.text {
+    position: absolute;
+    bottom: 8%;
+    color: white;
+}
+
+.text p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.text h1 {
+    font-size: 100px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: url(img/backgroud_text.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: background 20s linear infinite;
+
+}
+
+@keyframes background {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+.text h3 {
+    font-size: 20px;
+    width: 500px;
+}
+
+.text .btn {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+.text .btn a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: 3px solid whitesmoke;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.text .btn a:hover{
+    border: 3px solid grey;
+ transform: scale(1.05);
+color: whitesmoke;
+ 
+}
+.social {
+    position: absolute;
+    bottom: 8px;
+    right: 5%;
+    background: transparent;
+}
+
+.social .fa-brands {
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    margin: 25px 5px;
+    transition: 0.5s;
+
+}
+
+.social .fa-facebook:hover {
+    transform: scale(1.2);
+    color: #4267B2;
+}
+
+.social .fa-instagram:hover {
+    color: pink;
+    transform: scale(1.2);
+}
+
+.social .fa-linkedin:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+}
+
+.social .fa-youtube:hover {
+    transform: scale(1.2);
+    color: red;
+}
+::selection {
+    color: white;
+}
